@@ -11,7 +11,7 @@
 
 ## Prerequisites
 
-- **Node.js** (v22.14 or laterim)
+- **Node.js** (v22.14 or later)
 
 ---
 
@@ -38,7 +38,7 @@
 
    `npm run dev`
 
-   Nx will compile and run the React app on **<http://localhost:5173/>** by default.
+   It will compile and run the React app on **<http://localhost:5173/>** by default.
 
 2. **Open** your browser at <http://localhost:5173/>.
 
@@ -50,7 +50,7 @@ We use **Cucumber** + **Playwright** for E2E tests. The tests are located in the
 
 ### Run the tests
 
-1. In one terminal (if you dont have the app running already):
+1. In one terminal (if you don't have the app running already):
 
    `npm run dev`
 
@@ -73,7 +73,7 @@ You can add or modify test scenarios in the **Cucumber feature files** and **ste
 
 - **Feature Files**: Write your Gherkin (`.feature`) scenarios in `features/`.
 - **Step Definitions**: Implement the test logic in `.steps.ts` files under `steps/`.
-- **Aditional Objects**: Feel free to structure any Page Object Model (POM) elements however you prefer.
+- **Addional Objects**: Feel free to structure any Page Object Model (POM) elements however you prefer.
 
 When you run `npm run e2e`, it will execute all scenarios in `features/` and use the step definitions in `steps/`.
 
@@ -92,54 +92,3 @@ When you run `npm run e2e`, it will execute all scenarios in `features/` and use
 ---
 
 **Happy Testing!**
-
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-});
-```
