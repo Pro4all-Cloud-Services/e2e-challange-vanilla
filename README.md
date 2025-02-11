@@ -12,6 +12,8 @@
 ## Prerequisites
 
 - **Node.js** (v22.14 or later)
+  `nvm install 22.14`
+  `nvm use 22.14`
 
 ---
 
